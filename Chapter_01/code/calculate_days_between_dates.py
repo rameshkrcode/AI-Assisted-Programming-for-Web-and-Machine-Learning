@@ -1,3 +1,4 @@
+
 # AI-assisted function suggestion
 from datetime import datetime
 def calculate_days_between_dates(date1, date2):
