@@ -1,0 +1,25 @@
+name: Node.js CI/CD Pipeline
+on:
+  push:
+    branches: [ main ]  # Trigger workflow on push to the 'main' branch
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  # Use the latest Ubuntu environment
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3  # Check out the code from the repository
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'  # Specify Node.js version
+    - name: Install Dependencies
+      run: npm install  # Install project dependencies
+    - name: Run Tests
+      run: npm test  # Execute test suite to validate code
+    - name: Build Project
+      run: npm run build  # Build the application (optional based on app structure)
+    - name: Deploy to Production
+      run: |
+        echo "Deploying to production server..."
+        # Example deployment command (e.g., scp, rsync, or cloud provider CLI)
+        # scp -r ./dist user@your-server.com:/var/www/app

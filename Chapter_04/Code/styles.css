@@ -1,0 +1,21 @@
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #0044cc, #66a3ff);
+    padding: 15px;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+nav a:hover {
+    color: #ffcc00;
+}
