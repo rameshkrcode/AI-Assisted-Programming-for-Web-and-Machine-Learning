@@ -1,0 +1,6 @@
+
+{
+  "Performance Score": 68,
+  "Render Blocking Scripts": ["jquery.js", "analytics.js"],
+  "Suggested Fix": "Defer or Async JavaScript Loading"
+}
